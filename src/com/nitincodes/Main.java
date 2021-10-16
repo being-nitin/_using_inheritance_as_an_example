@@ -3,29 +3,29 @@ package com.nitincodes;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        child c1 = new child();
-        child c2 = new child();
-        c1.age = 56;
-        c1.height = 456;
-        c1.name = "nitin";
-        c1.run();
+	// write your  code here
+        child c1 = new child(23,"ravi");
+        child c2 = new child(26,"rahul");
         c1.walk();
-        c2.age = 58;
-        c2.height = 446;
-        c2.name = "nikhil";
-        c2.run();
+        c1.run();
         c2.walk();
+        c2.run();
     }
 }
 
 class child extends Parent{
+    public child(int age, String name) {
+        super(age, name);
     }
+}
 class Parent{
     int height;
     int age;
     String name;
-
+public Parent(int cAge , String cname){
+    this.name = cname;
+    this.age = cAge;
+}
     public void walk(){
         System.out.println(name+"is having height "+height+" and age "+age+" is walking");
     }
